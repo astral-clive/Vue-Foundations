@@ -16,6 +16,7 @@
     <input v-model="foo">
     <br>
     <p>Is foo "alpha"? {{ foo === "alpha" ? 'yes' : 'no' }}</p>
+    <div v-if="foo">Something is typed in as foo.</div>
   </div>
 
   <script>
