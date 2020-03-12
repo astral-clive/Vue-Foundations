@@ -7,13 +7,17 @@
 <body>
   <div id="app">
     {{ message }}
+    <div id="test-element">
+      <span v-bind:title="title">Hover your mouse here.</span>
+    </div>
   </div>
 
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Good morning, Copenhagen.'
+        message: 'Good morning, Copenhagen.',
+        title: 'Rosenburg'
       }
     })
   </script>
