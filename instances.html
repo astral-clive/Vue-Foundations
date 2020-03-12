@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue Examples - Instances</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  
+  <div id="app">
+    <p>{{ foo }}</p>
+    <!-- this will increment foo from the Vue Instance -->
+    <button v-on:click="foo++">Change Vue Property</button>
+  </div>
+
+  <!-- this will change foo in the Data Object and show reactively on the Vue Instance -->
+  <button onclick="data.foo = data.foo + 5;">Change Data Object</button>
+
+  <script>
+
+    // outside of Vue data
+    var data = { foo: 1 }
+
+    var vm = new Vue({
+      // options here
+      data: data,
+      el: '#app'
+    })
+
+  </script>
+</body>
+</html>
