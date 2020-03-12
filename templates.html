@@ -12,6 +12,10 @@
     <span>Message: {{ msg }} </span>
     <br>
     <span v-once>This will never change: {{ msg }}</span>
+    <br>
+    <input v-model="foo">
+    <br>
+    <p>Is foo "alpha"? {{ foo === "alpha" ? 'yes' : 'no' }}</p>
   </div>
 
   <script>
@@ -19,7 +23,8 @@
     var app = new Vue({
       el: '#app',
       data: {
-        msg: 'Good morning, Copenhagen.'
+        msg: 'Good morning, Copenhagen.',
+        foo: 'alpha'
       }
     })
 
