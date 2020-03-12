@@ -31,10 +31,35 @@
       // options here
       data: data,
       el: '#app',
+      beforeCreate: function() {
+        console.log( 'beforeCreate is called' );
+      },
       created: function () {
         // lifecycle hook of creation
+        console.log( 'created is called' );
         data.status = 'created';
-      }
+      },
+      beforeMount: function() {
+        console.log( 'beforeMount is called' );
+      },
+      mounted: function() {
+        console.log( 'mounted is called' );
+      },
+      beforeUpdate: function() {
+        console.log( 'beforeUpdate is called' );
+      },
+      updated: function() {
+        console.log( 'updated is called' );
+      },
+      mounted: function() {
+        console.log( 'mounted is called' );
+      },
+      mounted: function() {
+        console.log( 'mounted is called' );
+      },
+      mounted: function() {
+        console.log( 'mounted is called' );
+      },
     })
 
     // add watch method
