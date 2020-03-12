@@ -7,7 +7,11 @@
 <body>
   
   <div id="app">
+    <input v-model="msg">
+    <br>
     <span>Message: {{ msg }} </span>
+    <br>
+    <span v-once>This will never change: {{ msg }}</span>
   </div>
 
   <script>
