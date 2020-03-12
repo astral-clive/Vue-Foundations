@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Template Syntax</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  
+  <div id="app">
+    <span>Message: {{ msg }} </span>
+  </div>
+
+  <script>
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'Good morning, Copenhagen.'
+      }
+    })
+
+
+  </script>
+</body>
+</html>
