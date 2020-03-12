@@ -17,8 +17,16 @@
 
   <div id="app-3">
     <span v-if="seen">Now you see me.</span>
-
   </div>
+
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
 
   <script>
     var app = new Vue({
@@ -39,6 +47,17 @@
       el: '#app-3',
       data: {
         seen: true
+      }
+    });
+
+    var app4 = new Vue({
+      el: '#app-4',
+      data: {
+        todos: [
+          { text: 'Visit Geology Museum.' },
+          { text: 'Finish Series on Netflix.' },
+          { text: 'Review French on DuoLingo.' }
+        ]
       }
     })
 
