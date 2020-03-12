@@ -12,7 +12,9 @@
       <hr>
       <!-- display data using Vue specific properties -->
       {{ status }}
-      <!-- this will increment foo from the Vue Instance -->
+      <hr>
+      <p>{{ bar }}</p>
+      <input v-model="bar">
     </div>
     <button v-on:click="foo++">Change Vue Property</button>
   </div>
@@ -23,7 +25,7 @@
   <script>
 
     // outside of Vue data
-    var data = { foo: 1, status: 'fresh' }
+    var data = { foo: 1, status: 'fresh', bar: 'copenhagen' }
 
     var vm = new Vue({
       // options here
