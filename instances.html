@@ -7,8 +7,13 @@
 <body>
   
   <div id="app">
-    <p>{{ foo }}</p>
-    <!-- this will increment foo from the Vue Instance -->
+    <div>
+      <p>{{ foo }}</p>
+      <hr>
+      <!-- display data using Vue specific properties -->
+      {{ status }}
+      <!-- this will increment foo from the Vue Instance -->
+    </div>
     <button v-on:click="foo++">Change Vue Property</button>
   </div>
 
@@ -18,12 +23,18 @@
   <script>
 
     // outside of Vue data
-    var data = { foo: 1 }
+    var data = { foo: 1, status: 'fresh' }
 
     var vm = new Vue({
       // options here
       data: data,
       el: '#app'
+    })
+
+    // add watch method
+    vm.$watch( 'foo', function( newValue, oldValue ) {
+      // callback watches for foo
+      data.status = 'Was: ' + oldValue +'. Now: ' + newValue;
     })
 
   </script>
