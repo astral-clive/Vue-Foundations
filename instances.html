@@ -30,7 +30,11 @@
     var vm = new Vue({
       // options here
       data: data,
-      el: '#app'
+      el: '#app',
+      created: function () {
+        // lifecycle hook of creation
+        data.status = 'created';
+      }
     })
 
     // add watch method
