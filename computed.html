@@ -7,14 +7,22 @@
 <body>
   
   <div id="app">
-    {{ message }}
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
   </div>
 
   <script>
     var vm = new Vue({
       el: '#app',
       data: {
-        message: 'Good morning, Copenhagen.'
+        message: 'Welcome to Copenhagen.'
+      },
+      computed: {
+        // a computed getter
+        reversedMessage: function () {
+          // `this` points to the vm instance
+          return this.message.split('').reverse().join('')
+        }
       }
     })
   </script>
