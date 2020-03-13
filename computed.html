@@ -11,6 +11,8 @@
     <p>Computed reversed message: "{{ reversedMessage }}"</p>
   </div>
 
+  <button onClick="logMessages()">Log messages to console</button>
+
   <script>
     var vm = new Vue({
       el: '#app',
@@ -25,6 +27,11 @@
         }
       }
     })
+
+    function logMessages(){
+      console.log( vm.message );
+      console.log( vm.reversedMessage );
+    }
   </script>
 
 
