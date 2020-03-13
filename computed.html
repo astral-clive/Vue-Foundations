@@ -9,6 +9,7 @@
   <div id="app">
     <p>Original message: "{{ message }}"</p>
     <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    <p>Method reversed message: "{{ reversedMethodMessage() }}"</p>
   </div>
 
   <button onClick="logMessages()">Log messages to console</button>
@@ -25,12 +26,18 @@
           // `this` points to the vm instance
           return this.message.split('').reverse().join('')
         }
+      },
+      methods: {
+        reversedMethodMessage: function () {
+          return this.message.split('').reverse().join('')
+        }
       }
     })
 
     function logMessages(){
       console.log( vm.message );
       console.log( vm.reversedMessage );
+      console.log( vm.reversedMethodMessage );
     }
   </script>
 
