@@ -5,6 +5,8 @@
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
+
+  <button onClick="logMessages()">Log messages to console</button>
   
   <div id="app">
     <p>Original message: "{{ message }}"</p>
@@ -12,7 +14,6 @@
     <p>Method reversed message: "{{ reversedMethodMessage() }}"</p>
   </div>
 
-  <button onClick="logMessages()">Log messages to console</button>
 
   <script>
     var vm = new Vue({
@@ -37,7 +38,7 @@
     function logMessages(){
       console.log( vm.message );
       console.log( vm.reversedMessage );
-      console.log( vm.reversedMethodMessage );
+      console.log( vm.reversedMethodMessage() );
     }
   </script>
 
