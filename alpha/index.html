@@ -19,14 +19,15 @@
 
     <div id="App">
       <p>Brought in without array:</p>
-      <blog-post title="My journey with Vue"></blog-post>
-      <blog-post title="Blogging with Vue"></blog-post>
-      <blog-post title="Why Vue is so fun"></blog-post> 
+      <blog-post title="My journey with Vue" content="The content goes here."></blog-post>
+      <blog-post title="Blogging with Vue" content="The content goes here."></blog-post>
+      <blog-post title="Why Vue is so fun" content="The content goes here."></blog-post> 
       <p>Brought in with array:</p>
       <blog-post
         v-for="post in posts"
         v-bind:key="post.id"
         v-bind:title="post.title"
+        v-bind:content="post.content"
       ></blog-post>
     </div>
 
