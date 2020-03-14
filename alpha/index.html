@@ -18,12 +18,14 @@
   <body>
 
     <div id="App">
-      <p>Brought in with array:</p>
-      <blog-post
-        v-for="post in posts"
-        v-bind:key="post.id"
-        v-bind:post="post"
-      ></blog-post>
+      <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post
+          v-for="post in posts"
+          v-bind:key="post.id"
+          v-bind:post="post"
+          v-on:enlarge-text="postFontSize += 0.1"
+        ></blog-post>
+      </div>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->

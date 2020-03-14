@@ -7,15 +7,17 @@ var posts = [
 Vue.component('blog-post', {
   props: ['post'],
   template: '<div class="blog-post">\
-  <h3>{{ post.title }}</h3>\
-  <div v-html="post.content"></div>\
+    <h3>{{ post.title }}</h3>\
+    <div v-html="post.content"></div>\
+    <button v-on:click="$emit(\'enlarge-text\')">Enlarge text</button>\
   </div>'
 })
 
 var vm = new Vue({
   el: '#App',
   data: {
-    posts: posts
+    posts: posts,
+    postFontSize: 1
   }
 })
 
