@@ -5,8 +5,8 @@ var posts = [
 ];
 
 Vue.component('blog-post', {
-  props: ['title', 'content'],
-  template: '<div class="blog-post"><h3>{{ title }}</h3><div v-html="content">{{ content }}</div></div>'
+  props: ['post'],
+  template: '<div class="blog-post"><h3>{{ post.title }}</h3><div v-html="post.content"></div></div>'
 })
 
 var vm = new Vue({
